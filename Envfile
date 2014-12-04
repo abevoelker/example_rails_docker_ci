@@ -1,0 +1,3 @@
+variable :DATABASE_URL,      :String
+variable :ELASTICSEARCH_URL, :String
+variable :REDIS_URL,         :String

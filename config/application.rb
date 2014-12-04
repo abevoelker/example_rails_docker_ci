@@ -12,6 +12,7 @@ require "sprockets/railtie"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+ENVied.require(:default, ENV['RAILS_ENV'])
 
 module ExampleRailsDockerCi
   class Application < Rails::Application

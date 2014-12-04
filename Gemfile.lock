@@ -82,6 +82,7 @@ GEM
     rake (10.4.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    redis (3.0.7)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -137,6 +138,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 4.1.8)
+  redis
   rspec-rails (~> 3.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

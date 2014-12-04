@@ -1,0 +1,25 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - sudo ./install-fig.sh
+    - make build
+
+database:
+  override:
+    - /bin/true
+
+test:
+  override:
+    - make test
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push abevoelker/example_rails_docker_ci:latest
+      - docker tag abevoelker/example_rails_docker_ci:latest abevoelker/example_rails_docker_ci:$CIRCLE_SHA1
+      - docker push abevoelker/example_rails_docker_ci:$CIRCLE_SHA1

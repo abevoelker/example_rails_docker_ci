@@ -1,0 +1,12 @@
+web:
+  image: abevoelker/example_rails_docker_ci
+  links:
+    - postgres
+    - elasticsearch
+    - redis
+postgres:
+  image: abevoelker/postgres
+elasticsearch:
+  image: dockerfile/elasticsearch
+redis:
+  image: redis

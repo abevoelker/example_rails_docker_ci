@@ -36,8 +36,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 
 gem 'envied'
-
 gem 'redis'
+gem 'elasticsearch-persistence'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
